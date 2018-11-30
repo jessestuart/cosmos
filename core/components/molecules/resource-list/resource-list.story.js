@@ -96,7 +96,7 @@ storiesOf('Resource List').add('actions', () => (
         </ResourceList.Item>
       )}
       actions={[
-        { label: 'Delete',   icon: 'delete',   handler: function() {} },
+        { label: 'Delete', icon: 'delete', handler: function() {} },
         { label: 'Settings', icon: 'settings', handler: function() {} }
       ]}
     />
@@ -172,9 +172,9 @@ storiesOf('Resource List').add('stressed', () => (
         },
         {
           title:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula massa augue, in consectetur tellus tristique ut.',
+            'LoremipsumdolorsitametconsecteturadipiscingelitCrasvehiculamasLoremipsumdolorsitametconsecteturadipiscingelitCrasvehiculamassasa',
           subtitle:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula massa augue, in consectetur tellus tristique ut.',
+            'LoremipsumdolorsitametconsecteturadipiscingelitCrasvehiculamasLoremipsumdolorsitametconsecteturadipiscingelitCrasvehiculamassasa',
           actions: [
             { label: 'Settings', icon: 'settings', handler: function() {} },
             { label: 'Settings', icon: 'settings', handler: function() {} },
