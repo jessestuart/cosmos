@@ -76,7 +76,7 @@ const ListItem = props => {
       onClick={props.onClick ? callHandler(props.onClick) : null}
       {...Automation('resource-list.item')}
     >
-      <ListItem.Header>
+      <ListItem.Header flex={flexDistribution[props.distribution]}>
         {image}
         <div>
           {title}
@@ -106,8 +106,8 @@ ListItem.Element = styled.li`
 `
 
 ListItem.Header = styled.div`
-  /* flex: ${props => flexDistribution[props.distribution]}; */
-  flex: 1;
+  flex: ${props => props.flex};
+  /* flex: .5; */
   display: flex;
   align-items: center;
   word-break: break-all;
