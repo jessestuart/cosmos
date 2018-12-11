@@ -11,12 +11,6 @@ import Automation from '../../../_helpers/automation-attribute'
 import { actionToButtonProps, buttonBuilder } from '../action-builder'
 import { deprecate } from '../../../_helpers/custom-validations'
 
-const flexDistribution = {
-  '1/2 1/2': '1',
-  '1/3 2/3': '.5',
-  '2/3 1/3': '2'
-}
-
 /**
  * Builds the button from the action or
  * adds the key to the action if it's a raw button.
@@ -76,7 +70,7 @@ const ListItem = props => {
       onClick={props.onClick ? callHandler(props.onClick) : null}
       {...Automation('resource-list.item')}
     >
-      <ListItem.Header flex={flexDistribution[props.distribution]}>
+      <ListItem.Header>
         {image}
         <div>
           {title}
@@ -106,8 +100,7 @@ ListItem.Element = styled.li`
 `
 
 ListItem.Header = styled.div`
-  flex: ${props => props.flex};
-  /* flex: .5; */
+  flex: 1;
   display: flex;
   align-items: center;
   word-break: break-all;
@@ -154,8 +147,6 @@ ListItem.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.arrayOf(actionShapeWithRequiredIcon)
   ]),
-  /** Defines the distribution of the header and the body */
-  distribution: PropTypes.oneOf(['1/2 1/2', '2/3 1/3', '1/3 2/3']),
   _actions: props => {
     if (!props.actions) return
 
@@ -170,10 +161,6 @@ ListItem.propTypes = {
       })
     }
   }
-}
-
-ListItem.defaultProps = {
-  distribution: '1/2 1/2'
 }
 
 export default ListItem
