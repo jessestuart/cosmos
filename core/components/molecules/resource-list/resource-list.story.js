@@ -86,9 +86,28 @@ storiesOf('Resource List').add('actions', () => (
   <Example title="default">
     <ResourceList
       items={[
-        { title: 'Title One Title OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle One', subtitle: 'Subtitle One', image: IMAGE_URLS[0], id: 'abc123 khgd dkjhds dskj dfjkh fdskjh dsfkjhdfs kjdfhs kdfsjh dfskjhdfs kfdjsh dfskjhdfs lkdfjh dfskljhdf kljdfhs dfksljh dfskdfjh kjdfslh dfjksh dfsjkhdfs lhkfds hkldfsjhdf skjdfhs kjdfsh kjdfh sdflkjhdf kshldfsk jhdf kljdfsh kjdfsh kfjh dfslhk' },
-        { title: 'Title Two', subtitle: 'Subtitle Two', image: IMAGE_URLS[1], id: 'def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456' },
-        { title: 'Title Three', subtitle: 'def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456', image: IMAGE_URLS[2], id: 'ghi789' }
+        {
+          title:
+            'Title One Title OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle One',
+          subtitle: 'Subtitle One',
+          image: IMAGE_URLS[0],
+          id:
+            'abc123 khgd dkjhds dskj dfjkh fdskjh dsfkjhdfs kjdfhs kdfsjh dfskjhdfs kfdjsh dfskjhdfs lkdfjh dfskljhdf kljdfhs dfksljh dfskdfjh kjdfslh dfjksh dfsjkhdfs lhkfds hkldfsjhdf skjdfhs kjdfsh kjdfh sdflkjhdf kshldfsk jhdf kljdfsh kjdfsh kfjh dfslhk'
+        },
+        {
+          title: 'Title Two',
+          subtitle: 'Subtitle Two',
+          image: IMAGE_URLS[1],
+          id:
+            'def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456'
+        },
+        {
+          title: 'Title Three',
+          subtitle:
+            'def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456',
+          image: IMAGE_URLS[2],
+          id: 'ghi789'
+        }
       ]}
       renderItem={item => (
         <ResourceList.Item {...item}>
@@ -99,6 +118,7 @@ storiesOf('Resource List').add('actions', () => (
         { label: 'Delete', icon: 'delete', handler: function() {} },
         { label: 'Settings', icon: 'settings', handler: function() {} }
       ]}
+      distribution="1/2 1/2"
     />
   </Example>
 ))
@@ -120,6 +140,7 @@ storiesOf('Resource List').add('actions as buttons', () => (
         <Button icon="settings" onClick={() => {}} label="Settings" />,
         <Button icon="delete" onClick={() => {}} label="Delete" />
       ]}
+      distribution="1/2 1/2"
     />
   </Example>
 ))
