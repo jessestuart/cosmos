@@ -152,7 +152,10 @@ storiesOf('Resource List').add('action overrides', () => (
           subtitle: 'Subtitle Three',
           image: IMAGE_URLS[2],
           id: 'ghi789',
-          actions: [{ label: 'Settings', icon: 'settings', handler: function() {} }]
+          actions: [
+            <Button icon="settings" onClick={() => {}} label="Settings" disabled />,
+            <Button icon="delete" onClick={() => {}} label="Delete" />
+          ]
         }
       ]}
       renderItem={item => (
@@ -161,8 +164,8 @@ storiesOf('Resource List').add('action overrides', () => (
         </ResourceList.Item>
       )}
       actions={[
-        { label: 'Delete', icon: 'delete', handler: function() {} },
-        { label: 'Settings', icon: 'settings', handler: function() {} }
+        <Button icon="settings" onClick={() => {}} label="Settings" />,
+        <Button icon="delete" onClick={() => {}} label="Delete" />
       ]}
     />
   </Example>
