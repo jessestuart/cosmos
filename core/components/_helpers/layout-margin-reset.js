@@ -9,7 +9,7 @@ import { css } from '@auth0/cosmos/styled'
  */
 const applyMarginReset = (propName = 'marginReset') => props => {
   const propValue = props[propName]
-  const matchingValue = propValue === 'reset' ? '0 !important' : false
+  const matchingValue = propValue === 'reset' ? '0' : false
 
   if (matchingValue)
     return css`
@@ -23,10 +23,9 @@ const applyMarginReset = (propName = 'marginReset') => props => {
 
       > * > * > *:first-child {
         margin-top: ${matchingValue};
-      }`
+      }
+    `
   return ''
 }
-
-export default applyMarginReset
 
 export default applyMarginReset
