@@ -19,6 +19,7 @@ class ApplicationIndex extends React.Component {
       <PageLayout>
         <PageLayout.Header>
           <PageHeader
+            margin={{ top: 60, bottom: 100, left: 20, right: 40 }}
             title="Applications"
             description="Setup a mobile, web or IoT application to use Auth0 for Authentication."
             learnMore="/manage/applications"

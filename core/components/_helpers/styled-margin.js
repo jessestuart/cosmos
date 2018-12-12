@@ -9,9 +9,14 @@ const directions = ['top', 'bottom', 'left', 'right']
 
 const margin = props => {
   const margin = props.margin || {}
+  console.log('algo', props.margin)
+  // if (!props.margin) return {}
+  // console.log('hit margin helper with', props)
+
   let styles = ''
   directions.map(direction => {
     if (typeof margin[direction] !== 'undefined') {
+      console.log(`mapping direction ${direction}`)
       let rawValue = margin[direction]
       let value
       /*
